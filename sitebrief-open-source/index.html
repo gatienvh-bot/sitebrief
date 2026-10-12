@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="SiteBrief is a free, open-source website project planner that turns rough ideas into clear project briefs.">
+  <title>SiteBrief — Turn ideas into clear website plans</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="SiteBrief home"><span class="brand-mark">S</span> SiteBrief</a>
+    <span class="open-source">Free &amp; open source</span>
+  </header>
+  <main class="shell">
+    <section class="hero">
+      <p class="eyebrow">FROM ROUGH IDEA TO CLEAR PLAN</p>
+      <h1>Build a better brief<br><span>before you build a website.</span></h1>
+      <p class="intro">Describe your idea in plain language. SiteBrief turns it into an organized project brief you can share with a developer, designer, or AI coding assistant.</p>
+    </section>
+    <section class="workspace">
+      <form id="brief-form" class="panel">
+        <div class="panel-heading">
+          <div><p class="eyebrow">01 / YOUR PROJECT</p><h2>Tell us what you're making</h2></div>
+          <span class="step">1 of 2</span>
+        </div>
+        <label for="project-name">Project name</label>
+        <input id="project-name" name="project-name" placeholder="e.g. Local farm shop website" maxlength="80" required>
+        <label for="project-type">Project type</label>
+        <select id="project-type" name="project-type">
+          <option>Business website</option><option>Online store</option><option>Event platform</option><option>Portfolio</option><option>Web app</option><option>Community project</option>
+        </select>
+        <label for="audience">Who is it for?</label>
+        <input id="audience" name="audience" placeholder="e.g. local customers and families" maxlength="160">
+        <label for="problem">What should it help people do?</label>
+        <textarea id="problem" name="problem" rows="3" placeholder="Describe the main problem or goal in your own words..." maxlength="800" required></textarea>
+        <label for="style">Visual direction</label>
+        <textarea id="style" name="style" rows="2" placeholder="e.g. clean, warm, modern, natural photography..." maxlength="500"></textarea>
+        <label for="features">Important features</label>
+        <textarea id="features" name="features" rows="3" placeholder="e.g. opening hours, product catalogue, contact form..." maxlength="800"></textarea>
+        <button class="primary" type="submit">Generate my brief <span aria-hidden="true">↗</span></button>
+        <p class="privacy-note">Your answers stay in this browser. Nothing is uploaded to a server.</p>
+      </form>
+      <section class="panel output-panel" aria-live="polite">
+        <div class="panel-heading">
+          <div><p class="eyebrow">02 / YOUR PROJECT BRIEF</p><h2>Ready to shape your idea?</h2></div>
+          <span class="output-icon">✳</span>
+        </div>
+        <div id="empty-state" class="empty-state">
+          <div class="empty-art"><span>✳</span><span>↗</span><span>✦</span></div>
+          <h3>Your brief will appear here</h3>
+          <p>Fill in the form and generate a structured brief you can copy into your project notes or AI coding tool.</p>
+        </div>
+        <article id="result" class="result hidden">
+          <div id="brief-content"></div>
+          <div class="actions"><button id="copy-btn" class="primary" type="button">Copy brief</button><button id="download-btn" class="secondary" type="button">Download .txt</button></div>
+          <p id="feedback" class="feedback" role="status"></p>
+        </article>
+      </section>
+    </section>
+    <section class="how">
+      <p class="eyebrow">WHY SITEBRIEF?</p>
+      <div class="benefits">
+        <article><span class="benefit-number">01</span><h3>Get organized</h3><p>Turn scattered thoughts into a simple project outline.</p></article>
+        <article><span class="benefit-number">02</span><h3>Communicate clearly</h3><p>Share your goals and feature list with collaborators.</p></article>
+        <article><span class="benefit-number">03</span><h3>Keep control</h3><p>No account, no backend, and no data sent to a server.</p></article>
+      </div>
+    </section>
+    <footer><span>Made for people with ideas.</span><span>SiteBrief · Open-source starter project</span></footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
